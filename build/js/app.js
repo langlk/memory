@@ -81,4 +81,8 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function(){
+  $('#time').text(moment());
+});
+
 },{"./../js/card.js":1,"./../js/deck.js":2}]},{},[3]);
