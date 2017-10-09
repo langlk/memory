@@ -9,6 +9,7 @@ exports.cardModule = Card;
 function Deck(cards) {
   this.cards = cards;
   this.chosen = [];
+  this.matched = 0;
 }
 
 Deck.prototype.shuffle = function () {
@@ -26,6 +27,8 @@ Deck.prototype.chooseCard = function(card) {
   if (this.chosen.length == 2) {
     if (this.chosen[0].picture == this.chosen[1].picture) {
       result = "Matched!";
+      this.matched += 2;
+      console.log(this.matched);
     } else {
       result = "Not a Match."
     }
@@ -33,6 +36,10 @@ Deck.prototype.chooseCard = function(card) {
   }
   return result;
 };
+
+Deck.prototype.victory = function() {
+  return this.cards.length === this.matched;
+}
 
 exports.deckModule = Deck;
 
@@ -70,6 +77,10 @@ $(document).ready(function() {
         } else if (result == "Matched!") {
           $(".flipped").addClass('matched')
           $(".flipped").removeClass('flipped');
+          if (deck.victory()) {
+            result = "You Win!";
+            $(".replay .btn").show();
+          }
         }
         $('.message').text(result);
       }

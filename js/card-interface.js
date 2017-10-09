@@ -31,6 +31,10 @@ $(document).ready(function() {
         } else if (result == "Matched!") {
           $(".flipped").addClass('matched')
           $(".flipped").removeClass('flipped');
+          if (deck.victory()) {
+            result = "You Win!";
+            $(".replay .btn").show();
+          }
         }
         $('.message').text(result);
       }

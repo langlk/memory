@@ -13,3 +13,7 @@
   max-height: 90%;
   display: none;
 }
+
+.replay .btn {
+  display: none;
+}
