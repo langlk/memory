@@ -40,4 +40,15 @@ $(document).ready(function() {
       col = 0;
     }
   });
+
+  // $('.card').click(function() {
+  //   $(this).text($(this).attr('class').split(" ")[1]);
+  //   $(this).addClass('flipped');
+  //   var flipped = $('.flipped')
+  //   if (flipped.length == 2) {
+  //     flipped.forEach(function(card) {
+  //       if card.attr('class').includes($(this).)
+  //     });
+  //   }
+  // });
 });
