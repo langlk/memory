@@ -1,0 +1,15 @@
+.card {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 15px;
+  background-color: lavender;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  max-width: 90%;
+  max-height: 90%;
+  display: none;
+}
